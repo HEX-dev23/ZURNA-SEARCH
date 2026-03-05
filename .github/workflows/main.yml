@@ -1,18 +1,13 @@
-name: Zurna Search APK Derle
-on: push
+name: Zurna Search APK Yapıcı
+on: [push, pull_request]
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Build with Buildozer
-        uses: ArtemSBulgakov/buildozer-action@v1
-        with:
-          command: buildozer android debug
-          buildozer_version: stable
-      - name: Upload APK
-        uses: actions/upload-artifact@v4
-        with:
-          name: Zurna-Search-APK
-          path: bin/*.apk
 
+      - name: Build with Buildozer
+        uses: Peter-Smyth/buildozer-action@v1
+        with:
+          buildozer_version: master
