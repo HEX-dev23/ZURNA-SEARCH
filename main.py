@@ -202,8 +202,10 @@ text_alani = scrolledtext.ScrolledText(sol_frame, width=65, height=20, bg="#0a0a
 text_alani.pack(pady=20)
 text_alani.tag_config("baslik", foreground="#f1c40f", font=("Arial", 12, "bold"))
 text_alani.tag_config("link", foreground="#3498db", underline=True, font=("Arial", 10, "bold"))
+#test hihihih
 text_alani.tag_config("adres", foreground="#555555", font=("Arial", 8))
 text_alani.tag_bind("link", "<Button-1>", linki_ac)
 
 trendleri_tazele()
+
 pencere.mainloop()
