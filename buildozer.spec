@@ -1,10 +1,25 @@
-# Hem senin A17'n hem de arkadaşlarının Redmi/Xiaomi/Huawei telefonları için:
-android.archs = arm64-v8a, armeabi-v7a
+[app]
+title = Zurna Search
+package.name = zurnasearch
+package.domain = org.test
+source.dir = .
+source.include_exts = py,png,jpg,kv,atlas
+version = 0.1
 
-# Android sürüm desteğini geniş tutalım (Eski Huawei'ler için):
-android.minapi = 21
-android.api = 33
-
-# Gerekli izinler ve kütüphaneler (Zurna Search için):
+# Gereklilikler
 requirements = python3,kivy,requests,urllib3,certifi
+
+# İzinler
 android.permissions = INTERNET
+
+# Samsung A17 için Hedef Ayarlar
+android.api = 33
+android.minapi = 21
+android.sdk = 33
+android.ndk = 25b
+
+# KRİTİK NOKTA: Sadece senin telefonun için tek mimari
+android.archs = arm64-v8a
+
+# Lisans kabulü (Hata vermemesi için)
+android.accept_sdk_license = True
